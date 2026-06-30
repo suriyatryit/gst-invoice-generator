@@ -24,14 +24,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install and Build
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This tells GitHub to only upload the contents of the frontend folder
-          path: './frontend'
+          # This uploads Vite's compiled production folder
+          path: './frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
