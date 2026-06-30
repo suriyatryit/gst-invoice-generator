@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-swc' // or '@vitejs/plugin-react'
+import react from '@vitejs/react-swc'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/gst-invoice-generator/', // <-- MAKE SURE THIS LINE IS PRESENT
+  base: '/gst-invoice-generator/', 
 })
