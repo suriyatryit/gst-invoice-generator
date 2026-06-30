@@ -1,0 +1,13 @@
+{
+  "name": "gst-invoice-generator-root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:logic": "node verify.js",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
